@@ -1,0 +1,55 @@
+{%extends 'admin_layout.html'%}
+{%block content%}
+
+
+
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title">
+                            View Users</h2>
+                        <!-- <p class="inner-page-para mt-2">
+                            Beauty Care for Everyone</p> -->
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="/">Home</a></li>
+                            <li class="active"><span class="fas fa-angle-double-right mx-2"></span>View Users</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--//inner-page-->
+
+
+
+    <table class="table" style="width:60%;margin-left:20%;margin-top:5%;">
+               
+        <tbody>
+            
+            <tr>
+                <th>Name </th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Contact</th>
+            </tr>
+            {% for i in obj %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.address}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.contact}}</td>
+       
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+{%endblock%}
